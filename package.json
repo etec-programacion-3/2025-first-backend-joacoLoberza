@@ -1,0 +1,25 @@
+{
+  "name": "2025-first-backend-joacoloberza",
+  "version": "1.0.0",
+  "description": "A practice for make my first backend using JavaScript",
+  "homepage": "https://github.com/etec-programacion-3/2025-first-backend-joacoLoberza#readme",
+  "bugs": {
+    "url": "https://github.com/etec-programacion-3/2025-first-backend-joacoLoberza/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etec-programacion-3/2025-first-backend-joacoLoberza.git"
+  },
+  "license": "ISC",
+  "author": "Joaquín Loberza",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  }
+}
