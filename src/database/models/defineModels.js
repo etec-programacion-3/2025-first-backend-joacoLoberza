@@ -5,8 +5,8 @@ import { defaultValueSchemable } from "sequelize/lib/utils";
 //This funtion is for test the conection whit the data base.
 function testContection () {
     try {
+        console.log("Checking the database conection...")
         sequelize.authenticate()
-        console.log("Checking the database conection.")
     } catch(error) {
         throw new Error(`ERROR\nCan't check the conection:${error}`)
     }
@@ -14,7 +14,7 @@ function testContection () {
 testContection()
 
 //This is the model of the book.
-const Book = sequelize.define({
+const Book = sequelize.define("Book", {
     title:{
         type:DataTypes.TEXT,
         allowNull: false,

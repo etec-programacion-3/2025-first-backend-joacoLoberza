@@ -1,5 +1,5 @@
 import express from 'express'
-import { getAllBooks,getBookById, getBookByParam, deleteBook, addBook, updateBook } from '../handling/bookHandling'
+import { getAllBooks,getBookById, getBookByParam, deleteBook, addBook, updateBook } from '../handling/bookHandling.js'
 
 //Create the books router
 const booksRouter = express.Router()

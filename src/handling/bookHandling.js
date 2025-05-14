@@ -1,4 +1,4 @@
-import { Book } from "../database/models/defineModels"
+import { Book } from "../database/models/defineModels.js"
 
 export const getAllBooks = async (req,res) => {
     try {
@@ -67,7 +67,7 @@ export const deleteBook = async (req, res) => {
     try {
         const book = await Book.findByPk(req.params.id)
         if (book){
-            await Book.destroy(book)
+            await book.destroy()
             res.status(200)
         }
         else if (typeof req.body === "object") {

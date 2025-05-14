@@ -1,5 +1,5 @@
 import express from 'express'
-import { booksRouter } from './routers/bookRouters';
+import { booksRouter } from './routers/bookRouters.js';
 
 //Create app, define the logical port, activete de JSON midleware.
 const app = express()

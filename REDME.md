@@ -13,11 +13,11 @@
   -Register of books requests.
 
 ### API Endpoints
-| Method | Route          | Description                       |
-|--------|----------------|-----------------------------------|
-| GET    | `/books`       | Retrieves all books               |
-| GET    | `/books/:id`   | Retrieves a book using an ID      |
-| GET    | `/books/:param`| Retrieves a book using a parameter|
-| POST   | `/books`       | Creates a new book                |
-| PUT    | `/books/:id`   | Updates a book                    |
-| DELETE | `/books/:id`   | Deletes a book                    |
+| Method | Route                  | Description                       |
+|--------|------------------------|-----------------------------------|
+| GET    | `/libros`              | Retrieves all books               |
+| GET    | `/libros/:id`          | Retrieves a book using an ID      |
+| GET    | `/libros/buscar/:param`| Retrieves a book using a parameter|
+| POST   | `/libros`              | Creates a new book                |
+| PUT    | `/libros/:id`          | Updates a book                    |
+| DELETE | `/libros/:id`          | Deletes a book                    |
