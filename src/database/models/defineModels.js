@@ -18,23 +18,40 @@ const Book = sequelize.define({
     title:{
         type:DataTypes.TEXT,
         allowNull: false,
+        validate: {
+            isAlphanumeric: true,
+        }
     },
     author:{
         type:DataTypes.TEXT,
         defaultValue:"Anonimus",
+        validate: {
+            isAlphanumeric: true,
+        }
     },
     isbn:{
         type:DataTypes.INTEGER,
         allowNull:false,
-        unique:true
+        unique:true,
+        validate:{
+            isNumeric: true,
+            min: 0,
+            max: 9999999999999,
+        }
     },
     category:{
         type:DataTypes.TEXT,
         defaultValue:"Unknow",
+        validate: {
+            isAlphanumeric: true,
+        }
     },
     state:{
         type:DataTypes.TEXT,
-        defaultValue:"Avilable"
+        defaultValue:"Avilable",
+        validate: {
+            isAlphanumeric: true,
+        }
     },
     tableName:'Books',
     timestamps:true
