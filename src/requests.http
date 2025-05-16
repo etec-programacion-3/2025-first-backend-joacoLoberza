@@ -9,9 +9,17 @@ Content-Type: {{contentType}}
 GET {{urlBase}}/1
 Content-Type: {{contentType}}
 
-### Obtener un libro por parámetros.
-GET {{urlBase}}/buscar/titulo
+### Obtener un libro por parámetros de título.
+GET {{urlBase}}/buscar/titulo?criteria=Frankenstain
 Content-Type: {{contentType}}
+
+### Obtener un libro por parámetros de autor.
+GET {{urlBase}}/buscar/autor?criteria=MaryShelly
+Content-Type: {{contentType}}
+
+### Obtener un libro por parámetros de categoría.
+GET {{urlBase}}/buscar/categoria?criteria=CienciaFiccion
+Content-Type:{{contentType}}
 
 ### Agregar un libro.
 POST {{urlBase}}
@@ -25,11 +33,11 @@ Content-Type: {{contentType}}
 }
 
 ### Eliminar un libro.
-DELETE {{urlBase}}/1
+DELETE {{urlBase}}/2
 Content-Type: {{contentType}}
 
 ### Actualizar datos de libro.
-PUT {{urlBase}}/1
+PUT {{urlBase}}/2
 Content-Type: {{contentType}}
 
 {

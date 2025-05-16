@@ -30,7 +30,54 @@ export const getBookById = async (req, res) => {
 }
 
 export const getBookByParam = async (req, res) => {
-
+  const search = req.params.param
+  const criteria = req.query.criteria
+  if (search === "autor") {
+    try {
+      const book = await Book.findAll({where:{
+          author:criteria
+      }})
+      if (book == []) {
+        res.status(404).json({message:"Couldn't find the book."})
+      } else if (book) {
+          res.status(200).json(book)
+      }
+    } catch (error) {
+        req.status(500).json({message:`ERROR\nTher server can't update the book in the data base: ${error}`})
+    }
+  }
+  if (search === "titulo") {
+    try {
+        const book = await Book.findAll({
+            where:{
+                title:criteria
+            }
+        })
+        if (book == []) {
+            res.status(404).json({message:"Couldn't find the book."})
+        } else if (book) {
+            res.status(200).json(book)
+        }
+      } catch (error) {
+          req.status(500).json({message:`ERROR\nTher server can't update the book in the data base: ${error}`})
+      }
+    }
+    if (search === "categoria") {
+        try {
+          const book = await Book.findAll({
+            where:{
+              category:criteria
+            }
+          })
+          if (book == []) {
+            res.status(404).json({message:"Couldn't find the book."})
+          } else if (book) {
+            res.status(200).json(book)
+          }
+        } catch (error) {
+            req.status(500).json({message:`ERROR\nTher server can't update the book in the data base: ${error}`})
+        }
+    }
 }
 
 export const addBook = async (req, res) => {
