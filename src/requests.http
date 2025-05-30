@@ -2,23 +2,23 @@
 @contentType = application/json
 
 ### Obtener todos los libros.
-GET {{urlBase}}
+GET {{urlBase}}?order=dsc
 Content-Type: {{contentType}}
 
 ### Obtener un libro por su id.
-GET {{urlBase}}/1
+GET {{urlBase}}/2
 Content-Type: {{contentType}}
 
 ### Obtener un libro por parámetros de título.
-GET {{urlBase}}/buscar/titulo?criteria=Frankenstain
+GET {{urlBase}}/buscar/titulo?criteria=Frankenstain&order=asc
 Content-Type: {{contentType}}
 
 ### Obtener un libro por parámetros de autor.
-GET {{urlBase}}/buscar/autor?criteria=MaryShelly
+GET {{urlBase}}/buscar/autor?criteria=MaryShelly&order=asc
 Content-Type: {{contentType}}
 
 ### Obtener un libro por parámetros de categoría.
-GET {{urlBase}}/buscar/categoria?criteria=CienciaFiccion
+GET {{urlBase}}/buscar/categoria?criteria=CienciaFiccion&order=asc
 Content-Type:{{contentType}}
 
 ### Agregar un libro.
@@ -26,10 +26,10 @@ POST {{urlBase}}
 Content-Type: {{contentType}}
 
 {
-    "title":"Frankenstain",
-    "author": "Borges",
-    "isbn":9780553212471,
-    "category":"CienciaFiccion"
+    "title":"HarryPotterPiedraFilosofal",
+    "author": "NoMeAcuerdo",
+    "isbn":9780553212928,
+    "category":"Fantasia"
 }
 
 ### Eliminar un libro.

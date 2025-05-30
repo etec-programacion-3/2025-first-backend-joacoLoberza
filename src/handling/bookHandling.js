@@ -2,7 +2,20 @@ import { Book } from "../database/models/defineModels.js"
 
 export const getAllBooks = async (req,res) => {
     try {
-        const books = await Book.findAll()
+        let orderOption;
+
+        if (req.query.order === "dsc") {
+            orderOption = [["title", "DESC"]];
+        } else if (req.query.order === "asc") {
+            orderOption = [["title", "ASC"]];
+        } else {
+            return res.status(400).json({ message: "Can't solve the request." });
+        }
+
+        const books = await Book.findAll({
+            order: orderOption
+        });
+
         res.status(200).json(books)
     } catch (error) {
         res.status(500).send(error)
@@ -34,9 +47,22 @@ export const getBookByParam = async (req, res) => {
   const criteria = req.query.criteria
   if (search === "autor") {
     try {
-      const book = await Book.findAll({where:{
+      let orderOption;
+      
+      if (req.query.order === "dsc") {
+        orderOption = [["title", "DESC"]];
+      } else if (req.query.order === "asc") {
+        orderOption = [["title", "ASC"]];
+      } else {
+        return res.status(400).json({ message: "Can't solve the request." });
+      }
+
+      const book = await Book.findAll({
+        where:{
           author:criteria
-      }})
+        },
+        order: orderOption
+      })
       if (book == []) {
         res.status(404).json({message:"Couldn't find the book."})
       } else if (book) {
@@ -48,10 +74,21 @@ export const getBookByParam = async (req, res) => {
   }
   if (search === "titulo") {
     try {
+        let orderOption;
+      
+        if (req.query.order === "dsc") {
+            orderOption = [["title", "DESC"]];
+        } else if (req.query.order === "asc") {
+            orderOption = [["title", "ASC"]];
+        } else {
+            return res.status(400).json({ message: "Can't solve the request." });
+        }
+
         const book = await Book.findAll({
             where:{
                 title:criteria
-            }
+            },
+            order:orderOption
         })
         if (book == []) {
             res.status(404).json({message:"Couldn't find the book."})
@@ -64,10 +101,21 @@ export const getBookByParam = async (req, res) => {
     }
     if (search === "categoria") {
         try {
+          let orderOption;
+      
+          if (req.query.order === "dsc") {
+            orderOption = [["title", "DESC"]];
+          } else if (req.query.order === "asc") {
+            orderOption = [["title", "ASC"]];
+          } else {
+            return res.status(400).json({ message: "Can't solve the request." });
+          }
+
           const book = await Book.findAll({
             where:{
               category:criteria
-            }
+            },
+            order:orderOption
           })
           if (book == []) {
             res.status(404).json({message:"Couldn't find the book."})
