@@ -33,11 +33,11 @@ Content-Type: {{contentType}}
 }
 
 ### Eliminar un libro.
-DELETE {{urlBase}}/2
+DELETE {{urlBase}}/14
 Content-Type: {{contentType}}
 
 ### Actualizar datos de libro.
-PUT {{urlBase}}/2
+PUT {{urlBase}}/9
 Content-Type: {{contentType}}
 
 {

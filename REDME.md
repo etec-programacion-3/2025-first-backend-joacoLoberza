@@ -12,6 +12,9 @@
   -User and permissions system.
   -Register of books requests.
 
+### How to use in local repository
+  Use the url of the local host (http://localhost:port or http://127.0.0.0:port) using the port 3000.
+
 ### API Endpoints
 | Method | Route                  | Description                       |
 |--------|------------------------|-----------------------------------|
