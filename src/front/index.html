@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Biblioteca</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container-main">
+            <h1>Biblioteca</h1>
+
+            <!--Formulario para cargar libros-->
+            <form id="form-libro">
+                    <input type="text" id="name" class="form-control" placeholder="Nombre" required>
+                    <input type="text" id="author" class="form-control" placeholder="Autor">
+                    <input type="text" id="category" class="form-control" placeholder="Categoría" required>
+                    <input type="number" id="isbn" class="form-control" placeholder="Isbn" required>
+                <div id="form-buttons">
+                    <button type="submit" class="form-button ok-button">Ok</button>
+                    <button type="button" id="x-button" class="form-button x-button">X</button>
+                </div>
+            </form>
+
+            <!--Tabla de Libros-->
+            <div id="book-table-container">
+                <table id="book-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Autor</th>
+                            <th>Categoría</th>
+                            <th>Isbn</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="mensaje" class="mt-2"></div>
+        </div>
+        <script src="interaction.js"></script>
+    </body>
+</html>

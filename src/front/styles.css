@@ -1,0 +1,113 @@
+:root {
+    --gray01:rgb(65, 65, 65);
+    --gray02: rgb(40, 40, 40);
+    --white01: rgb(255,255,255);
+    --white02: rgb(248, 248, 248);
+    --green01: rgb(90, 164, 7);
+    --red01: rgb(169, 0, 0);
+    --green02: rgb(68, 123, 5);
+    --red02: rgb(129, 0, 0);
+    --purple01: rgb(102, 26, 255);
+
+    --roboto: "Roboto", sans-serif;
+}
+
+body {
+    align-items: center;
+    background-color: var(--gray01);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vh;
+    overflow: hidden;
+    padding: 0px;
+}
+
+th {
+    border-bottom: solid 5px var(--purple01) ;
+}
+
+thead {
+    color: var(--white01);
+    font-family: var(--roboto);
+    font-size: 20px;
+    height: 30px;
+}
+
+h1 {
+    color: var(--white01);
+    font-family: var(--roboto);
+}
+
+#book-table-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#container-main {
+    background-color: var(--gray02);
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 20px;
+}
+
+#form-libro {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#form-buttons {
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.form-button {
+    border: 0px;
+    border-radius: 5px;
+    color: var(--white01);
+    display: inline-block;
+    font-family: var(--roboto);
+    font-size: 14px;
+    height: 21px;
+    min-width: 30px;
+}
+
+.form-control {
+    border: 0px;
+    border-radius: 5px;
+    display: inline-block;
+    color: var(--gray02);
+    font-family: var(--roboto);
+    font-size: 18px;
+    height: 30px;
+    margin: 10px;
+    min-width: 200px;
+    padding: 8px;
+}
+
+.form-control:focus {
+    background-color: var(--white02);
+    outline: 3px var(--white02) solid;
+}
+
+.ok-button {
+    background-color: var(--green01);
+}
+
+.ok-button:hover {
+    background-color: var(--green02);
+}
+
+
+.x-button {
+    background-color: var(--red01);
+}
+
+.x-button:hover {
+    background-color: var(--red02);
+}

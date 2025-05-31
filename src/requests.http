@@ -1,0 +1,45 @@
+@urlBase = http://localhost:3000/libros
+@contentType = application/json
+
+### Obtener todos los libros.
+GET {{urlBase}}?order=dsc
+Content-Type: {{contentType}}
+
+### Obtener un libro por su id.
+GET {{urlBase}}/2
+Content-Type: {{contentType}}
+
+### Obtener un libro por parámetros de título.
+GET {{urlBase}}/buscar/titulo?criteria=Frankenstain&order=asc
+Content-Type: {{contentType}}
+
+### Obtener un libro por parámetros de autor.
+GET {{urlBase}}/buscar/autor?criteria=MaryShelly&order=asc
+Content-Type: {{contentType}}
+
+### Obtener un libro por parámetros de categoría.
+GET {{urlBase}}/buscar/categoria?criteria=CienciaFiccion&order=asc
+Content-Type:{{contentType}}
+
+### Agregar un libro.
+POST {{urlBase}}
+Content-Type: {{contentType}}
+
+{
+    "title":"HarryPotterPiedraFilosofal",
+    "author": "NoMeAcuerdo",
+    "isbn":9780553212928,
+    "category":"Fantasia"
+}
+
+### Eliminar un libro.
+DELETE {{urlBase}}/14
+Content-Type: {{contentType}}
+
+### Actualizar datos de libro.
+PUT {{urlBase}}/9
+Content-Type: {{contentType}}
+
+{
+    "author":"MaryShelly"
+}
