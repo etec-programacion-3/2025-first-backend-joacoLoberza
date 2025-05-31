@@ -130,6 +130,7 @@ export const getBookByParam = async (req, res) => {
 
 export const addBook = async (req, res) => {
     try {
+        console.log(req.body, typeof req.body)
         await Book.create(req.body)
         res.status(200)
     } catch (error) {
@@ -142,7 +143,7 @@ export const updateBook = async (req, res) => {
     try {
         const book = await Book.findByPk(req.params.id)
         if (book){
-            await book.update(req.body)
+            await book.update(json(req.body))
             res.status(200)
         }
         else if (typeof req.body === "object") {

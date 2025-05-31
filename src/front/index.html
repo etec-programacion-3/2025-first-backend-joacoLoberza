@@ -17,11 +17,29 @@
                     <input type="text" id="author" class="form-control" placeholder="Autor">
                     <input type="text" id="category" class="form-control" placeholder="Categoría" required>
                     <input type="number" id="isbn" class="form-control" placeholder="Isbn" required>
-                <div class="">
-                    <button type="submit" class="btn btn-primary flex-fill">Agregar</button>
-                    <button type="button" id="btn-cancelar" class="btn btn-secondary flex-fill d-none">Cancelar edición</button>
+                <div id="form-buttons">
+                    <button type="submit" class="form-button ok-button">Ok</button>
+                    <button type="button" id="x-button" class="form-button x-button">X</button>
                 </div>
             </form>
+
+            <!--Tabla de Libros-->
+            <div id="book-table-container">
+                <table id="book-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Autor</th>
+                            <th>Categoría</th>
+                            <th>Isbn</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="mensaje" class="mt-2"></div>
         </div>
         <script src="interaction.js"></script>
     </body>

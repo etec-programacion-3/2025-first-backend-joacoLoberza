@@ -6,11 +6,11 @@ import cors from 'cors';
 const app = express()
 const PORT = process.env.PORT || 3000;
 app.use(express.json())
+app.use(cors())
 
 //Define url routes for the routers.
 app.use('/libros',booksRouter)
 
-app.use(cors())
 
 //Initializate the server.
 try {
