@@ -1,0 +1,37 @@
+:root {
+    --gray01:rgb(65, 65, 65);
+    --gray02: rgb(40, 40, 40);
+    --white01: rgb(255,255,255);
+
+    --roboto: "Roboto", sans-serif;
+}
+
+body {
+    align-items: center;
+    background-color: var(--gray01);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vh;
+    overflow: hidden;
+    padding: 0px;
+}
+
+h1 {
+    color: var(--white01);
+    font-family: var(--roboto);
+}
+
+#container-main {
+    background-color: var(--gray02);
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 10px;
+}
+
+#form-libro {
+    display: flex;
+    flex-flow: row wrap;
+}

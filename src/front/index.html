@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Biblioteca</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container-main">
+            <h1>Biblioteca</h1>
+
+            <!--Formulario para cargar libros-->
+            <form id="form-libro">
+                    <input type="text" id="name" class="form-control" placeholder="Nombre" required>
+                    <input type="text" id="author" class="form-control" placeholder="Autor">
+                    <input type="text" id="category" class="form-control" placeholder="Categoría" required>
+                    <input type="number" id="isbn" class="form-control" placeholder="Isbn" required>
+                <div class="">
+                    <button type="submit" class="btn btn-primary flex-fill">Agregar</button>
+                    <button type="button" id="btn-cancelar" class="btn btn-secondary flex-fill d-none">Cancelar edición</button>
+                </div>
+            </form>
+        </div>
+        <script src="interaction.js"></script>
+    </body>
+</html>
