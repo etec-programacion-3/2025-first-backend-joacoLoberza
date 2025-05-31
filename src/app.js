@@ -1,5 +1,6 @@
-import express from 'express'
+import express from 'express';
 import { booksRouter } from './routers/bookRouters.js';
+import cors from 'cors';
 
 //Create app, define the logical port, activete de JSON midleware.
 const app = express()
@@ -8,6 +9,8 @@ app.use(express.json())
 
 //Define url routes for the routers.
 app.use('/libros',booksRouter)
+
+app.use(cors())
 
 //Initializate the server.
 try {
